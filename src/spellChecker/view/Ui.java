@@ -62,12 +62,12 @@ public class Ui {
 		frame = new JFrame("spellchecker");
 		frame.setResizable(false);
 		//frame.setType(Type.UTILITY);
-		frame.setBounds(100, 100, 583, 367);
+		frame.setBounds(100, 100, 605, 377);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 11, 547, 98);
+		panel.setBounds(10, 22, 579, 98);
 		frame.getContentPane().add(panel);
 		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 		
@@ -80,17 +80,7 @@ public class Ui {
 		JTextArea textArea = new JTextArea();
 		scrollPane.setViewportView(textArea);
 		controller.createDictionnary();
-        JMenuBar menuBar = new JMenuBar(); 
-        JMenu open = new JMenu("Open a file");
-        menuBar.add(open);
-        open.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				controller.fileExplorer(frame, textArea);
-			}
-		});
-        frame.add(menuBar);
+       
 		JButton btnCheckSpelling = new JButton("check spelling");
 		
 		btnCheckSpelling.addActionListener(new ActionListener() {
@@ -98,11 +88,11 @@ public class Ui {
 				suggestionListHashMap = controller.checkSpelling(textArea, suggestionListHashMap, highlight);
 			}
 		});
-		btnCheckSpelling.setBounds(243, 120, 109, 23);
+		btnCheckSpelling.setBounds(232, 126, 134, 23);
 		getFrame().getContentPane().add(btnCheckSpelling);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(243, 189, 109, 138);
+		panel_1.setBounds(246, 194, 109, 138);
 		getFrame().getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -135,12 +125,18 @@ public class Ui {
 			}
 		});
 		textField = new JTextField();
-		textField.setBounds(243, 154, 106, 29);
+		textField.setBounds(246, 154, 109, 29);
 		textArea.setFont(new Font("Century Gothic", Font.TYPE1_FONT,12));
 		textArea.addMouseListener(createPopupListener(textArea));
 		frame.getContentPane().add(textField);
 		textArea.setLineWrap(true);
 		textField.setColumns(10);
+		
+		JMenuBar menuBar_1 = new JMenuBar();
+		menuBar_1.setBounds(0, 0, 75, 22);
+		JMenu open = new JMenu("Open a file");
+		menuBar_1.add(open);
+		frame.getContentPane().add(menuBar_1);
 		frame.setVisible(true);
 	}
 	
