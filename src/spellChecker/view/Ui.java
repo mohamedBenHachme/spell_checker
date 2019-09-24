@@ -134,7 +134,13 @@ public class Ui {
 		
 		JMenuBar menuBar_1 = new JMenuBar();
 		menuBar_1.setBounds(0, 0, 75, 22);
-		JMenu open = new JMenu("Open a file");
+		JMenuItem open = new JMenuItem("Open a file");
+		open.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.fileExplorer(frame, textArea);
+			}
+		});
+		
 		menuBar_1.add(open);
 		frame.getContentPane().add(menuBar_1);
 		frame.setVisible(true);
