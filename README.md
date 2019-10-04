@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-# spell_checker 
-  this is a java application for checking words spelling and providing the correct words for the wrong ones and correcting them
-# spell_checker
-=======
+# RUN
+  download the ropository and nivigate to spell_checker/runnable jar/ and run the spellChecker.jar file.
+
 # spell_checker
   <div>
       <p>this is a java application for checking words spelling and providing the correct words for the wrong ones and correcting them.<p>
@@ -29,4 +27,4 @@
        <img src="./screenshots/img4.png"/>
         <img src="./screenshots/img5.png"/>
   </div>
->>>>>>> 81e1fb9... Update README.md
+
